@@ -1,44 +1,10 @@
 "use client";
 
-import Head from "next/head";
 import Link from "next/link";
 import { Navbar } from "./Nav";
 import Footer from "./Footer";
-
-type Project = {
-  id: number;
-  title: string;
-  description: string;
-  tags: string[];
-  isOurOwn: boolean;
-};
-
-const projectData: Project[] = [
-  {
-    id: 1,
-    title: "Technika Management System",
-    description:
-      "Developed a comprehensive internal SaaS platform for managing client engagements, resources, and project lifecycles.",
-    tags: ["SaaS", "Internal Tool", "Enterprise"],
-    isOurOwn: true,
-  },
-  {
-    id: 2,
-    title: "E-Commerce Platform Modernization",
-    description:
-      "Led the complete refactoring of a high-traffic e-commerce site, focusing on performance, scalability, and modern UI/UX.",
-    tags: ["Client Work", "React", "Cloud Infra"],
-    isOurOwn: false,
-  },
-  {
-    id: 3,
-    title: "FinTech API Integration Service",
-    description:
-      "Consulting and development to securely integrate multiple external banking APIs into a client’s digital wallet application.",
-    tags: ["Consulting", "Security", "APIs"],
-    isOurOwn: false,
-  },
-];
+import { Project } from "@/types/main";
+import { projects } from "@/data/projects";
 
 const Services = () => (
   <section id="services" className="py-24 md:py-36 bg-gray-50">
@@ -66,39 +32,36 @@ const Projects = ({ projects }: { projects: Project[] }) => (
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-col h-full hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
-          >
-            <div className="mb-4">
-              <span
-                className={`inline-block text-xs font-semibold px-3 py-1 rounded-full 
+          <Link href={`/${project?.id}`} key={project.id}>
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-col h-full hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer">
+              <div className="mb-4">
+                <span
+                  className={`inline-block text-xs font-semibold px-3 py-1 rounded-full 
                 ${
                   project.isOurOwn
                     ? "bg-teal-100 text-teal-700"
                     : "bg-indigo-100 text-indigo-700"
                 }`}
-              >
-                {project.isOurOwn ? "Our Creation" : "Client Project"}
-              </span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">
-              {project.title}
-            </h3>
-            <p className="text-gray-600 mb-4 flex-grow">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs text-gray-500 bg-gray-50 px-2 py-1 rounded"
                 >
-                  {tag}
+                  {project.isOurOwn ? "Our Creation" : "Client Project"}
                 </span>
-              ))}
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                {project.title}
+              </h3>
+              <p className="text-gray-600 mb-4 flex-grow">{project.summary}</p>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs text-gray-500 bg-gray-50 px-2 py-1 rounded"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
@@ -128,15 +91,11 @@ const UbunifuLabsPage = () => {
   return (
     <div>
       <Navbar />
-
       <main>
         <Services />
-
-        <Projects projects={projectData} />
-
+        <Projects projects={projects} />
         <Contact />
       </main>
-
       <Footer />
     </div>
   );

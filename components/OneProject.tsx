@@ -1,41 +1,17 @@
-"use client"
+"use client";
 
-import { ComponentType, SVGProps, useState } from "react";
+import { ComponentType, SVGProps, useEffect, useState } from "react";
 import { Navbar } from "./Nav";
 import Footer from "./Footer";
-import { BriefcaseIcon, CalendarIcon, CogIcon, SparklesIcon } from "@heroicons/react/16/solid";
-
-const mockProjectData: DetailedProject = {
-  title: "Technika Management System (TMS)",
-  client: "Technika Limited (Internal)",
-  summary:
-    "A bespoke internal enterprise resource planning (ERP) tool designed to streamline operational workflows and resource management across various departments.",
-  description: [
-    "The goal of the TMS project was to replace several disparate spreadsheets and legacy tools with a single, unified application. This system manages client onboarding, project allocation, time tracking, and invoice generation, significantly reducing administrative overhead.",
-    "We utilized a domain-driven design (DDD) approach to ensure the system is highly modular and scalable, anticipating future feature expansions into areas like HR and advanced analytics.",
-    "A key success factor was the user experience design. By prioritizing a clean, minimal interface, we achieved high user adoption rates immediately after rollout, proving that complex tools can still be intuitive.",
-  ],
-  technologies: [
-    "Next.js (App Router)",
-    "TypeScript",
-    "PostgreSQL",
-    "Tailwind CSS",
-    "Vercel/AWS Deployment",
-    "Jest/Cypress (Testing)",
-  ],
-  duration: "6 Months (Initial Build)",
-  status: "Ongoing",
-};
-
-type DetailedProject = {
-  title: string;
-  client?: string;
-  summary: string;
-  description: string[];
-  technologies: string[];
-  duration: string;
-  status: "Completed" | "Ongoing" | "Internal";
-};
+import {
+  BriefcaseIcon,
+  CalendarIcon,
+  CogIcon,
+  SparklesIcon,
+} from "@heroicons/react/16/solid";
+import { projects } from "@/data/projects";
+import { Project } from "@/types/main";
+import Link from "next/link";
 
 const DetailBlock = ({
   title,
@@ -60,10 +36,23 @@ const DetailBlock = ({
   </div>
 );
 
-export const ProjectDetailPage = () => {
+type ProjectTypeProps = {
+  projectSlug: string;
+};
+
+export const ProjectDetailPage = ({ projectSlug }: ProjectTypeProps) => {
   const accentColor = "bg-teal-600";
   const accentTextColor = "text-teal-600";
-  const [project] = useState(mockProjectData);
+  const [project, setProject] = useState<Project>();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const pro = projects.find((proj) => proj?.id == projectSlug);
+      setProject(pro);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -75,30 +64,30 @@ export const ProjectDetailPage = () => {
             <span
               className={`inline-block text-sm font-semibold px-4 py-1.5 rounded-full mb-3 
                 ${
-                  project.status === "Ongoing"
+                  project?.status === "Ongoing"
                     ? "bg-yellow-100 text-yellow-700"
                     : "bg-green-100 text-green-700"
                 }`}
             >
-              Status: {project.status}
+              Status: {project?.status}
             </span>
             <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
-              {project.title}
+              {project?.title}
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {project.summary}
+              {project?.summary}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
             <DetailBlock
               title="Client/Focus"
-              value={project.client || "Confidential Client"}
+              value={project?.client || "Confidential Client"}
               icon={BriefcaseIcon}
             />
             <DetailBlock
               title="Duration"
-              value={project.duration}
+              value={project?.duration ?? ""}
               icon={CalendarIcon}
             />
             <DetailBlock
@@ -108,16 +97,18 @@ export const ProjectDetailPage = () => {
             />
           </div>
 
-          {/* --- 3. Full Description --- */}
           <div className="bg-white p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-100 mb-16">
             <h2 className={`text-3xl font-bold ${accentTextColor} mb-6`}>
               The Challenge & Solution
             </h2>
 
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
-              {project.description.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: project?.description ?? "<p>No description</p>",
+                }}
+                className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none!"
+              ></div>
             </div>
           </div>
 
@@ -127,7 +118,7 @@ export const ProjectDetailPage = () => {
               Technology Stack
             </h2>
             <div className="flex flex-wrap gap-4">
-              {project.technologies.map((tech) => (
+              {project?.technologies.map((tech) => (
                 <span
                   key={tech}
                   className={`inline-block ${accentColor} text-white font-medium px-4 py-2 rounded-lg text-sm shadow-md transition duration-300 hover:opacity-90`}
@@ -136,6 +127,13 @@ export const ProjectDetailPage = () => {
                 </span>
               ))}
             </div>
+            <Link
+              href={project?.link ?? "#"}
+              target="_blank"
+              className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-bold text-lg py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-xl w-full mt-10"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </main>

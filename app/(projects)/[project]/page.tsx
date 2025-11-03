@@ -1,10 +1,10 @@
 import { ProjectDetailPage } from "@/components/OneProject";
-import React from "react";
 
-function page() {
+async function page({ params }: { params: Promise<{ project: string }> }) {
+  const { project } = await params;
   return (
     <div>
-      <ProjectDetailPage />
+      <ProjectDetailPage projectSlug={project} />
     </div>
   );
 }
