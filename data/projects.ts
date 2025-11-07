@@ -90,6 +90,6 @@ export const projects: Project[] = [
     status: 'Consulting',
     tags: ['Consulting', 'Telecommunication', 'Strategy', 'Client Work'],
     isOurOwn: false,
-    link: "#,
+    link: "#",
   }
 ];
