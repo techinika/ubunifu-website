@@ -87,7 +87,7 @@ export const projects: Project[] = [
     `,
     technologies: ['Strategic Consulting', 'Vendor Evaluation', 'Regulatory Compliance', 'Process Documentation'],
     duration: '1 Month (Consultation and Implementation)',
-    status: 'Consulting',
+    status: 'Ongoing',
     tags: ['Consulting', 'Telecommunication', 'Strategy', 'Client Work'],
     isOurOwn: false,
     link: "#",
