@@ -79,20 +79,54 @@ export const projects: Project[] = [
     link: "#",
   },
   {
-    id: 'coemika-sms',
-    title: 'COEMIKA Bulk SMS Communication Strategy',
-    client: 'COEMIKA COOPERATIVE',
-    summary: 'Consultancy for establishing a reliable Bulk SMS service for member communication, including vendor selection and regulatory compliance.',
+    id: "coemika-sms",
+    title: "COEMIKA Bulk SMS Communication Strategy",
+    client: "COEMIKA COOPERATIVE",
+    summary:
+      "Consultancy for establishing a reliable Bulk SMS service for member communication, including vendor selection and regulatory compliance.",
     description: `
         <p>COEMIKA COOPERATIVE approached Ubunifu Labs to solve a critical communication challenge: reaching their large member base quickly and affordably. Our goal was to establish a reliable, compliant Bulk SMS service.</p>
         <p>We conducted a thorough consultation, explaining the entire process, including regulatory requirements (Sender ID approval from RURA) and operational costs. We then provided strategic guidance on selecting the optimal service provider (Call Africa).</p>
         <p>Our ongoing role includes documentation, process assistance, and continuous follow-up to ensure a smooth transition to the new communication channel once regulatory approval is secured. This project highlights our ability to deliver technical strategy and implementation support, not just code.</p>
     `,
-    technologies: ['Strategic Consulting', 'Vendor Evaluation', 'Regulatory Compliance', 'Process Documentation'],
-    duration: '1 Month (Consultation and Implementation)',
-    status: 'Ongoing',
-    tags: ['Consulting', 'Telecommunication', 'Strategy', 'Client Work'],
+    technologies: [
+      "Strategic Consulting",
+      "Vendor Evaluation",
+      "Regulatory Compliance",
+      "Process Documentation",
+    ],
+    duration: "1 Month",
+    status: "Completed",
+    tags: ["Consulting", "Telecommunication", "Strategy", "Client Work"],
     isOurOwn: false,
+    type: "Consulting",
     link: "#",
-  }
+  },
+  {
+    id: "achille-songa-website-2025",
+    title: "Cishahayo Songa Achille Personal Website",
+    description: `<p>A high-impact, modern personal portfolio and professional hub designed to showcase expertise, manage bookings, and facilitate direct collaboration for a software engineer and tech entrepreneur.</p> <p>The primary function is to drive user engagement and convert visitors into collaborators or clients through a streamlined booking and contact process.</p>`,
+    tags: [
+      "Portfolio",
+      "Booking Platform",
+      "Tech Entrepreneurship",
+      "Personal Branding",
+      "Lead Generation",
+    ],
+    isOurOwn: false,
+    client: "Cishahayo Songa Achille",
+    summary:
+      "The project serves as the central digital hub for Cishahayo Songa Achille, consolidating his profile as an engineer, speaker, and entrepreneur. ",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "State Management (Local/Context)",
+    ],
+    duration: "1 Week",
+    status: "Completed",
+    type: "Software Development",
+    link: "https://achillesonga.com",
+  },
 ];
