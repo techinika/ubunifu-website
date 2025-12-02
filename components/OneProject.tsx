@@ -24,7 +24,7 @@ const DetailBlock = ({
 }) => (
   <div className="flex items-start space-x-3 p-4 bg-white rounded-lg border border-gray-100 shadow-sm">
     <Icon
-      className="h-6 w-6 text-teal-600 flex-shrink-0 mt-0.5"
+      className="h-6 w-6 text-teal-600 shrink-0 mt-0.5"
       aria-hidden="true"
     />
     <div>
@@ -92,7 +92,7 @@ export const ProjectDetailPage = ({ projectSlug }: ProjectTypeProps) => {
             />
             <DetailBlock
               title="Service Type"
-              value="Software Development"
+              value={project?.type ?? "Consulting"}
               icon={SparklesIcon}
             />
           </div>

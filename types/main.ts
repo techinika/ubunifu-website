@@ -9,5 +9,6 @@ export interface Project {
   technologies: string[];
   duration: string;
   status: "Completed" | "Ongoing" | "Internal";
+  type: "Software Development" | "Consulting" | "Project Design";
   link: string;
 }
