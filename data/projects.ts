@@ -78,4 +78,21 @@ export const projects: Project[] = [
     status: "Ongoing",
     link: "#",
   },
+  {
+    id: 'coemika-sms',
+    title: 'COEMIKA Bulk SMS Communication Strategy',
+    client: 'COEMIKA COOPERATIVE',
+    summary: 'Consultancy for establishing a reliable Bulk SMS service for member communication, including vendor selection and regulatory compliance.',
+    description: `
+        <p>COEMIKA COOPERATIVE approached Ubunifu Labs to solve a critical communication challenge: reaching their large member base quickly and affordably. Our goal was to establish a reliable, compliant Bulk SMS service.</p>
+        <p>We conducted a thorough consultation, explaining the entire process, including regulatory requirements (Sender ID approval from RURA) and operational costs. We then provided strategic guidance on selecting the optimal service provider (Call Africa).</p>
+        <p>Our ongoing role includes documentation, process assistance, and continuous follow-up to ensure a smooth transition to the new communication channel once regulatory approval is secured. This project highlights our ability to deliver technical strategy and implementation support, not just code.</p>
+    `,
+    technologies: ['Strategic Consulting', 'Vendor Evaluation', 'Regulatory Compliance', 'Process Documentation'],
+    duration: '1 Month (Consultation and Implementation)',
+    status: 'Ongoing',
+    tags: ['Consulting', 'Telecommunication', 'Strategy', 'Client Work'],
+    isOurOwn: false,
+    link: "#",
+  }
 ];
