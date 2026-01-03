@@ -127,6 +127,45 @@ export const projects: Project[] = [
     duration: "1 Week",
     status: "Completed",
     type: "Software Development",
-    link: "https://achillesonga.com",
+    link: "https://achillesonga.netlify.app",
+  },
+  {
+    id: "ijwi-language-collective",
+    title: "Ijwi Language Collective Website",
+    description: `
+    <p>
+      A modern, user-focused website built for Ijwi Language Collective to support 
+      tourists and Kinyarwanda learners in discovering language services, learning 
+      about the organization, and applying for programs directly online.
+    </p>
+    <p>
+      The platform centralizes information, service requests, and communication — 
+      eliminating reliance on scattered social media channels and creating a single, 
+      trusted point of contact for prospective clients.
+    </p>
+  `,
+    tags: [
+      "Educational Website",
+      "Language Learning",
+      "Tourism Support",
+      "Service Application",
+      "Digital Transformation",
+    ],
+    isOurOwn: false,
+    client: "Ijwi Language Collective",
+    summary:
+      "A centralized digital platform that helps Ijwi Language Collective connect with tourists and Kinyarwanda learners, manage service inquiries, and communicate professionally through a single, well-structured website.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "Form Handling & Validation",
+      "Content Management",
+    ],
+    duration: "2 Weeks",
+    status: "Completed",
+    type: "Software Development",
+    link: "https://ijwi.netlify.app",
   },
 ];

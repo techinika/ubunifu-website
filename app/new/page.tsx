@@ -3,7 +3,7 @@ import { baseUrl } from "../sitemap";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Request a Project | Ubunifu Labs",
+  title: "Start a consulting, research or development project with Ubunifu Labs",
   description:
     "Start your next digital transformation project with Ubunifu Labs. Submit your project request to our team of software developers and technology consultants for tailored, innovative solutions.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Innovation Lab",
   ],
   openGraph: {
-    title: "Request a Project | Ubunifu Labs",
+    title: "Start a consulting, research or development project with Ubunifu Labs",
     description:
       "Work with Ubunifu Labs to design, build, and scale custom software and technology solutions for your business or organization.",
     url: `${baseUrl}/new`,
