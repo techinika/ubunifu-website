@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ubunifu.techinika.co.rw/sitemap.xml

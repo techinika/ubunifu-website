@@ -1,6 +1,6 @@
 import { projects } from "@/data/projects";
 
-export const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+export const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://ubunifu.techinika.co.rw";
 
 export default async function sitemap() {
   const staticEntries = [

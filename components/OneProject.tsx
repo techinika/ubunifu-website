@@ -1,6 +1,6 @@
 "use client";
 
-import { ComponentType, SVGProps, useEffect, useState } from "react";
+import { ComponentType, SVGProps } from "react";
 import { Navbar } from "./Nav";
 import Footer from "./Footer";
 import {
@@ -9,7 +9,6 @@ import {
   CogIcon,
   SparklesIcon,
 } from "@heroicons/react/16/solid";
-import { projects } from "@/data/projects";
 import { Project } from "@/types/main";
 import Link from "next/link";
 
@@ -37,22 +36,30 @@ const DetailBlock = ({
 );
 
 type ProjectTypeProps = {
-  projectSlug: string;
+  project: Project | undefined;
 };
 
-export const ProjectDetailPage = ({ projectSlug }: ProjectTypeProps) => {
+export const ProjectDetailPage = ({ project }: ProjectTypeProps) => {
   const accentColor = "bg-teal-600";
   const accentTextColor = "text-teal-600";
-  const [project, setProject] = useState<Project>();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const pro = projects.find((proj) => proj?.id == projectSlug);
-      setProject(pro);
-    };
-
-    fetchData();
-  }, []);
+  if (!project) {
+    return (
+      <div>
+        <Navbar />
+        <main className="bg-gray-50 py-16 sm:py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Project Not Found</h1>
+            <p className="text-gray-600">The project you&apos;re looking for doesn&apos;t exist.</p>
+            <Link href="/" className="text-teal-600 hover:underline mt-4 inline-block">
+              Return to Home
+            </Link>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div>

@@ -1,5 +1,4 @@
 import { baseUrl } from "@/app/sitemap";
-import { ProjectDetailPage } from "@/components/OneProject";
 import { projects } from "@/data/projects";
 import type { Metadata } from "next";
 
@@ -15,29 +14,30 @@ export async function generateMetadata({
     return {
       title: "Project Not Found | Ubunifu Labs",
       description:
-        "The project you’re looking for could not be found. Explore more solutions from Ubunifu Labs.",
+        "The project you're looking for could not be found. Explore our software development and IT consulting services.",
     };
   }
 
   return {
-    title: `${project.title} | Ubunifu Labs`,
+    title: `${project.title} | Case Study`,
     description: project.summary,
     keywords: [
       project.title,
-      ...project.technologies,
-      ...project.tags,
-      "Ubunifu Labs",
+      "Case Study",
       "Software Development",
       "IT Consulting",
       "Custom Solutions",
       "Digital Transformation",
+      "Ubunifu Labs Rwanda",
+      ...project.technologies,
+      ...project.tags,
     ],
     openGraph: {
-      title: `${project.title} | Ubunifu Labs`,
+      title: `${project.title} | Ubunifu Labs Case Study`,
       description: project.summary,
       url: `${baseUrl}/${project.id}`,
       siteName: "Ubunifu Labs",
-      locale: "en_US",
+      locale: "en_RW",
       type: "article",
     },
     twitter: {
@@ -45,14 +45,48 @@ export async function generateMetadata({
       title: `${project.title} | Ubunifu Labs`,
       description: project.summary,
     },
+    alternates: {
+      canonical: `${baseUrl}/${project.id}`,
+    },
   };
+}
+
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    project: project.id,
+  }));
 }
 
 async function page({ params }: { params: Promise<{ project: string }> }) {
   const { project } = await params;
+  const projectData = projects.find((p) => p.id === project);
+  
+  const articleSchema = projectData ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: projectData.title,
+    description: projectData.summary,
+    url: `${baseUrl}/${projectData.id}`,
+    datePublished: "2024-01-01",
+    author: {
+      "@type": "Organization",
+      name: "Ubunifu Labs",
+    },
+  } : null;
+
+  const { ProjectDetailPage } = await import("@/components/OneProject");
+  
   return (
     <div>
-      <ProjectDetailPage projectSlug={project} />
+      {articleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(articleSchema),
+          }}
+        />
+      )}
+      <ProjectDetailPage project={projectData} />
     </div>
   );
 }
