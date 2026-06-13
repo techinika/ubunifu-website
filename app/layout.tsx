@@ -4,32 +4,32 @@ import { baseUrl } from "./sitemap";
 
 export const metadata: Metadata = {
   title: {
-    default: "Ubunifu Labs – Custom Software Development & IT Consulting in Rwanda",
+    default: "Ubunifu Labs – Tech Support & Managed IT Services in Rwanda",
     template: "%s | Ubunifu Labs",
   },
   description:
-    "Ubunifu Labs is Rwanda's leading software development company. We provide custom software development, IT support outsourcing, website development, and technology consulting. Trusted by 50+ businesses. Build first, pay after.",
+    "Is your business held back by slow websites, broken email, or unreliable systems? Ubunifu Labs provides professional IT support and managed IT services for SMEs in Rwanda. We fix tech problems before they break your business.",
   keywords: [
     "Ubunifu Labs",
-    "Software Development Rwanda",
+    "IT Support Rwanda",
+    "Managed IT Services",
+    "Tech Support Kigali",
     "IT Company Rwanda",
-    "Custom Software Development",
-    "IT Outsourcing",
-    "Website Development",
-    "Tech Consulting",
-    "Digital Transformation",
-    "IT Support",
-    "Software Company Kigali",
+    "Website Repair",
+    "Email Fix",
+    "Network Maintenance",
+    "IT Outsourcing Rwanda",
+    "SME IT Support",
+    "Computer Repair Kigali",
+    "System Maintenance",
+    "IT Consulting Rwanda",
     "Techinika",
-    "Web Application Development",
-    "Mobile App Development",
-    "SaaS Development",
   ],
   metadataBase: new URL(baseUrl),
   openGraph: {
-    title: "Ubunifu Labs – Custom Software Development & IT Consulting in Rwanda",
+    title: "Ubunifu Labs – Tech Support & Managed IT Services in Rwanda",
     description:
-      "Rwanda's leading software development company. Custom software, IT outsourcing, website development, and tech consulting. Trusted by 50+ businesses.",
+      "Professional IT support and managed IT services for SMEs in Rwanda. We fix slow websites, broken email, and unreliable systems before they cost you business.",
     url: baseUrl,
     siteName: "Ubunifu Labs",
     locale: "en_RW",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ubunifu Labs – Software Development & IT Consulting",
+    title: "Ubunifu Labs – Tech Support & Managed IT",
     description:
-      "Rwanda's leading software company. Custom development, IT support outsourcing, and tech consulting.",
+      "Fixing tech problems before they break your business. IT support and managed services for Rwandan SMEs.",
   },
   robots: {
     index: true,
@@ -62,7 +62,7 @@ export default function RootLayout({
     alternateName: "Ubunifu Labs",
     url: "https://ubunifu.techinika.co.rw",
     description:
-      "Ubunifu Labs is a technology consulting and software company providing digital solutions, consulting, and software development.",
+      "Ubunifu Labs is a managed IT services company providing professional tech support, system maintenance, and IT solutions for small and medium businesses in Rwanda.",
     sameAs: [
       "https://www.linkedin.com/showcase/ubunifulabs",
       "https://x.com/techinika",

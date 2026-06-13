@@ -3,26 +3,25 @@ import { baseUrl } from "../sitemap";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Start Your Project – Custom Software Development & IT Consulting",
+  title: "Get IT Support – Tech Support & Managed IT Services in Rwanda",
   description:
-    "Start your software development or IT consulting project with Rwanda's leading tech company. Get a working demo before you pay. Custom web apps, mobile apps, IT support, and digital transformation services.",
+    "Need IT support in Rwanda? Tell us about your technology problem. We offer one-time fixes and monthly managed IT services for SMEs. Fast response, clear pricing, no hidden fees.",
   keywords: [
-    "Start Project",
-    "Software Development",
-    "IT Consulting",
-    "Web App Development",
-    "Custom Software",
-    "Digital Transformation",
-    "IT Outsourcing",
-    "Tech Consulting",
-    "Project Request",
-    "Ugandan Software Company",
-    "East Africa Software",
+    "IT Support",
+    "Tech Support",
+    "Managed IT Services",
+    "Computer Repair",
+    "IT Help Kigali",
+    "Website Repair",
+    "Email Support",
+    "Network Fix",
+    "IT Services Rwanda",
+    "Business IT Support",
   ],
   openGraph: {
-    title: "Start Your Project with Ubunifu Labs",
+    title: "Get IT Support – Ubunifu Labs",
     description:
-      "Work with Rwanda's top software company to build custom software, get IT support, or transform your business digitally.",
+      "Professional IT support for Rwandan businesses. One-time fixes and monthly managed IT services. We fix tech problems before they break your business.",
     url: `${baseUrl}/new`,
     siteName: "Ubunifu Labs",
     locale: "en_RW",
@@ -30,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Start Your Project – Ubunifu Labs",
+    title: "Get IT Support – Ubunifu Labs",
     description:
-      "Get a working demo before you pay. Custom software, IT support, and consulting from Rwanda's trusted tech partner.",
+      "Professional IT support for Rwandan businesses. We fix slow websites, broken email, and unreliable systems.",
   },
   alternates: {
     canonical: `${baseUrl}/new`,

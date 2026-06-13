@@ -5,34 +5,34 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "What if I don’t like the website or app?",
+    question: "How quickly can you respond to an IT issue?",
     answer:
-      "If you decide not to proceed after reviewing the demo, you don’t pay. We keep the work, and you can always claim it later if you decide to move forward.",
+      "For monthly managed IT clients, we typically respond within 1-2 hours during business hours. Urgent issues get priority response. For one-time fix requests, we schedule a diagnostic within 24 hours.",
   },
   {
-    question: "Who owns the code?",
+    question: "What if the problem can't be fixed remotely?",
     answer:
-      "If the solution is custom-built and you pay for it, the code belongs entirely to you. If you don’t proceed with payment, the code remains the property of Ubunifu Labs. This applies whether templates are used or not.",
+      "If a problem requires on-site attention, we come to your location in Kigali. Remote diagnosis always comes first so we arrive prepared with the right tools and parts to fix the issue in one visit.",
   },
   {
-    question: "How long does it take to build?",
+    question: "Do you work with businesses outside Kigali?",
     answer:
-      "Most projects take 2 weeks or more, depending on complexity, features, and agreement timelines. We always agree on delivery timelines before starting.",
+      "Yes. While our base is Kigali, we support businesses across Rwanda. Remote monitoring and support work anywhere with internet. For on-site needs, we coordinate visits based on scheduling and urgency.",
   },
   {
-    question: "Do you offer hosting?",
+    question: "What if I only need help with one specific problem?",
     answer:
-      "We don’t provide hosting directly, but we work with trusted hosting providers and help you choose the right option. Our customers also get free SSL certificates and security services through SecureDot.",
+      "That is exactly what our one-time fix service is for. You tell us the problem, we assess it, give you a clear quote, and fix it. No long-term commitment, no monthly fees.",
   },
   {
-    question: "Do you offer website management and support?",
+    question: "How does monthly managed IT pricing work?",
     answer:
-      "Yes. We offer optional website management services, including updates, security monitoring, content updates, and performance improvements.",
+      "Monthly pricing is based on the size of your business and the complexity of your systems. We start with a full assessment, then give you a fixed monthly rate. No surprise bills, no hidden costs.",
   },
   {
-    question: "What industries do you work with?",
+    question: "What happens if you don't fix the problem?",
     answer:
-      "We work with education, media, government, non-profits, startups, SMEs, and other organizations that need reliable digital solutions.",
+      "We do not consider a job done until the problem is actually solved. If an issue persists after our fix, we come back at no extra charge. Your technology working properly is our only measure of success.",
   },
 ];
 

@@ -4,50 +4,50 @@ export const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What if I don’t like the website or app?",
+      name: "How quickly can you respond to an IT issue?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If you decide not to proceed after reviewing the demo, you don’t pay. We keep the work, and you can always claim it later if you decide to move forward.",
+        text: "For monthly managed IT clients, we typically respond within 1-2 hours during business hours. Urgent issues get priority response. For one-time fix requests, we schedule a diagnostic within 24 hours.",
       },
     },
     {
       "@type": "Question",
-      name: "Who owns the code?",
+      name: "What if the problem can't be fixed remotely?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If the solution is custom-built and you pay for it, the code belongs entirely to you. If you don’t proceed with payment, the code remains the property of Ubunifu Labs, whether templates are used or not.",
+        text: "If a problem requires on-site attention, we come to your location in Kigali. Remote diagnosis always comes first so we arrive prepared with the right tools and parts to fix the issue in one visit.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does it take to build?",
+      name: "Do you work with businesses outside Kigali?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most projects take two weeks or more, depending on complexity, features, and agreement timelines. Delivery timelines are agreed upon before starting.",
+        text: "Yes. While our base is Kigali, we support businesses across Rwanda. Remote monitoring and support work anywhere with internet. For on-site needs, we coordinate visits based on scheduling and urgency.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer hosting?",
+      name: "What if I only need help with one specific problem?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We do not provide hosting directly, but we work with trusted hosting providers and help clients choose the right option. Customers also get free SSL certificates and security services through Techinika.",
+        text: "That is exactly what our one-time fix service is for. You tell us the problem, we assess it, give you a clear quote, and fix it. No long-term commitment, no monthly fees.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer website management and support?",
+      name: "How does monthly managed IT pricing work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We offer optional website management services including updates, security monitoring, content updates, and performance improvements.",
+        text: "Monthly pricing is based on the size of your business and the complexity of your systems. We start with a full assessment, then give you a fixed monthly rate. No surprise bills, no hidden costs.",
       },
     },
     {
       "@type": "Question",
-      name: "What industries do you work with?",
+      name: "What happens if you don't fix the problem?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We work with education, media, government, non-profits, startups, SMEs, and other organizations that need reliable digital solutions.",
+        text: "We do not consider a job done until the problem is actually solved. If an issue persists after our fix, we come back at no extra charge. Your technology working properly is our only measure of success.",
       },
     },
   ],

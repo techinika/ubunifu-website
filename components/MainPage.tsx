@@ -3,177 +3,212 @@
 import Link from "next/link";
 import { Navbar } from "./Nav";
 import Footer from "./Footer";
-import { Project } from "@/types/main";
-import { projects } from "@/data/projects";
 import FAQSection from "./FAQs";
 import {
-  Code2,
+  Globe,
+  Mail,
+  Laptop,
+  Wrench,
   Shield,
-  TrendingUp,
+  Search,
+
+  HeartHandshake,
+  Zap,
   Users,
   Clock,
-  Headphones,
+  MessageCircle,
+  Building2,
+  Landmark,
+  ShoppingBag,
+  Heart,
+  GraduationCap,
+  Truck,
   CheckCircle2,
   ArrowRight,
-  Lightbulb,
-  Rocket,
-  Settings,
-  Globe,
+  Star,
 } from "lucide-react";
 
-const Hero = () => (
-  <section className="relative py-24 md:py-36 bg-gradient-to-br from-gray-900 via-gray-800 to-teal-900 overflow-hidden">
+const Problem = () => (
+  <section className="relative py-24 md:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-teal-900 overflow-hidden">
     <div className="absolute inset-0 opacity-10">
       <div className="absolute top-20 left-10 w-72 h-72 bg-teal-400 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-red-500 rounded-full blur-3xl"></div>
     </div>
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div className="text-center max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-300 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-          <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></span>
-          Trusted by 50+ Businesses in Rwanda & Beyond
-        </div>
+      <div className="text-center max-w-4xl mx-auto mb-16">
+        <p className="text-teal-400 font-semibold text-sm uppercase tracking-widest mb-4">THE PROBLEM</p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-          Software Solutions That{" "}
-          <span className="text-teal-400">Drive Real Growth</span>
+          Every day, businesses lose money to tech problems{" "}
+          <span className="text-teal-400">they didn&apos;t see coming.</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10">
-          Ubunifu Labs is the software unit of{" "}
-          <strong>Techinika Limited</strong>. We build custom software, provide
-          IT support, and help businesses数字化 transform — without the cost of
-          an in-house team.
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+        <div className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 text-center hover:bg-white/10 transition group">
+          <div className="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-500/30 transition">
+            <Globe className="w-7 h-7 text-red-400" />
+          </div>
+          <h3 className="text-xl font-bold text-white mb-3">Website goes down</h3>
+          <div className="space-y-1">
+            <p className="text-gray-300">Clients leave.</p>
+            <p className="text-red-400 font-semibold">Revenue lost.</p>
+          </div>
+        </div>
+
+        <div className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 text-center hover:bg-white/10 transition group">
+          <div className="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-500/30 transition">
+            <Mail className="w-7 h-7 text-red-400" />
+          </div>
+          <h3 className="text-xl font-bold text-white mb-3">Email stops working</h3>
+          <div className="space-y-1">
+            <p className="text-gray-300">Deals fall through.</p>
+            <p className="text-red-400 font-semibold">Trust broken.</p>
+          </div>
+        </div>
+
+        <div className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 text-center hover:bg-white/10 transition group">
+          <div className="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-500/30 transition">
+            <Laptop className="w-7 h-7 text-red-400" />
+          </div>
+          <h3 className="text-xl font-bold text-white mb-3">Systems crash</h3>
+          <div className="space-y-1">
+            <p className="text-gray-300">Hours wasted.</p>
+            <p className="text-red-400 font-semibold">Staff frustrated.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <p className="text-lg text-gray-400 italic">
+          Most businesses only find out when it&apos;s too late.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/new"
-            className="inline-flex items-center justify-center bg-teal-500 hover:bg-teal-600 text-white font-bold text-lg py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-          >
-            Start Your Project
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-          <Link
-            href="#services"
-            className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold text-lg py-4 px-8 rounded-xl transition-all duration-300 border border-white/20"
-          >
-            Our Services
-          </Link>
-        </div>
       </div>
     </div>
   </section>
 );
 
-const Stats = () => (
-  <section className="py-12 bg-teal-600">
+const Solution = () => (
+  <section className="py-24 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-          <div className="text-3xl md:text-4xl font-bold text-white">50+</div>
-          <div className="text-teal-100 text-sm mt-1">Projects Delivered</div>
+      <div className="text-center mb-4">
+        <p className="text-teal-600 font-semibold text-sm uppercase tracking-widest mb-4">OUR SOLUTION</p>
+      </div>
+
+      <div className="text-center max-w-4xl mx-auto mb-16">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          Ubunifu Labs
+        </h2>
+        <p className="text-xl text-gray-600 mt-4">
+          Your dedicated IT partner, preventing problems before they happen.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="bg-teal-50 rounded-3xl p-8 md:p-10 border border-teal-100 relative overflow-hidden group hover:shadow-lg transition">
+          <div className="absolute top-4 right-4 w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+            1
+          </div>
+          <Wrench className="w-10 h-10 text-teal-600 mb-4" />
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">Fix It</h3>
+          <p className="text-gray-600 text-lg mb-6">
+            We assess, solve &amp; implement. Fast.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["Website", "Email", "Networks", "Systems", "Hardware"].map(
+              (tag) => (
+                <span
+                  key={tag}
+                  className="text-sm font-medium text-teal-700 bg-teal-100 px-3 py-1.5 rounded-lg"
+                >
+                  {tag}
+                </span>
+              )
+            )}
+          </div>
         </div>
-        <div>
-          <div className="text-3xl md:text-4xl font-bold text-white">3+</div>
-          <div className="text-teal-100 text-sm mt-1">Years Experience</div>
-        </div>
-        <div>
-          <div className="text-3xl md:text-4xl font-bold text-white">99%</div>
-          <div className="text-teal-100 text-sm mt-1">Client Satisfaction</div>
-        </div>
-        <div>
-          <div className="text-3xl md:text-4xl font-bold text-white">24/7</div>
-          <div className="text-teal-100 text-sm mt-1">Support Available</div>
+
+        <div className="bg-teal-600 rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:shadow-lg transition">
+          <div className="absolute top-4 right-4 w-10 h-10 bg-white text-teal-600 rounded-full flex items-center justify-center font-bold text-lg">
+            2
+          </div>
+          <Shield className="w-10 h-10 text-teal-200 mb-4" />
+          <h3 className="text-2xl font-bold text-white mb-3">Maintain It</h3>
+          <p className="text-teal-100 text-lg mb-6">
+            Monthly IT team. Always on.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["Monitoring", "Updates", "Prevention", "Upgrades"].map((tag) => (
+              <span
+                key={tag}
+                className="text-sm font-medium text-teal-800 bg-teal-200 px-3 py-1.5 rounded-lg"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   </section>
 );
 
-const Services = () => {
-  const services = [
+const HowItWorks = () => {
+  const steps = [
     {
-      icon: Code2,
-      title: "Custom Software Development",
+      number: "01",
+      title: "Assess",
       description:
-        "Tailor-made applications built from scratch to solve your unique business challenges.",
-      tags: ["Web Apps", "Mobile Apps", "APIs", "SaaS"],
+        "We visit your business, review all your systems, and find the weak spots.",
+      icon: Search,
     },
     {
-      icon: Globe,
-      title: "Website Development",
+      number: "02",
+      title: "Fix",
       description:
-        "Professional, SEO-optimized websites that convert visitors into customers.",
-      tags: ["E-commerce", "Corporate", "Landing Pages", "CMS"],
+        "We build a clear plan, explain it in plain language, and implement it.",
+      icon: Wrench,
     },
     {
-      icon: Shield,
-      title: "IT Security & Consulting",
+      number: "03",
+      title: "Maintain",
       description:
-        "Protect your business with security audits, SSL setup, and compliance guidance.",
-      tags: ["Security Audit", "SSL", "Compliance", "Training"],
-    },
-    {
-      icon: TrendingUp,
-      title: "Digital Transformation",
-      description:
-        "Modernize outdated systems and workflows for better efficiency and scalability.",
-      tags: ["System Migration", "Automation", "Cloud", "Integration"],
-    },
-    {
-      icon: Headphones,
-      title: "IT Support & Outsourcing",
-      description:
-        "Full technical support for businesses without an IT team. We handle everything.",
-      tags: ["Help Desk", "Maintenance", "Monitoring", "Training"],
-    },
-    {
-      icon: Lightbulb,
-      title: "Tech Consulting",
-      description:
-        "Expert guidance on technology decisions, architecture, and roadmap planning.",
-      tags: ["Strategy", "Architecture", "Audits", "Roadmap"],
+        "For monthly clients, we stay — monitoring, updating, and preventing problems.",
+      icon: HeartHandshake,
     },
   ];
 
   return (
-    <section id="services" className="py-24 bg-white">
+    <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Services
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From custom development to ongoing IT support — we provide
-            end-to-end technology solutions.
+        <div className="text-center mb-4">
+          <p className="text-teal-600 font-semibold text-sm uppercase tracking-widest mb-4">
+            HOW IT WORKS
           </p>
         </div>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900">
+            We make IT simple.
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group p-6 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-teal-500 transition-colors">
-                  <service.icon className="w-6 h-6 text-teal-600 group-hover:text-white transition-colors" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900">
-                  {service.title}
-                </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {steps.map((step, index) => (
+            <div key={index} className="relative text-center">
+              <div className="text-7xl font-bold text-teal-100 mb-6">
+                {step.number}
               </div>
-              <p className="text-gray-600 mb-4 text-sm">
-                {service.description}
+              <div className="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                <step.icon className="w-8 h-8 text-teal-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                {step.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {step.description}
               </p>
-              <div className="flex flex-wrap gap-2">
-                {service.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs font-medium text-gray-500 bg-gray-50 px-2 py-1 rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-12 left-[60%] w-full h-0.5 bg-gradient-to-r from-teal-300 to-gray-200 -z-10"></div>
+              )}
             </div>
           ))}
         </div>
@@ -182,141 +217,52 @@ const Services = () => {
   );
 };
 
-const ITSupport = () => (
-  <section className="py-24 bg-gradient-to-r from-teal-600 to-teal-800">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-            <Headphones className="w-4 h-4" />
-            IT Outsourcing
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Don&apos;t Have an IT Team? We&apos;ll Be Yours.
-          </h2>
-          <p className="text-lg text-teal-100 mb-8">
-            Small and medium businesses often can&apos;t justify a full in-house
-            IT department. We provide comprehensive IT support at a fraction of
-            the cost — with predictable monthly pricing.
-          </p>
-          <div className="space-y-4">
-            {[
-              "24/7 Help Desk Support",
-              "System Monitoring & Maintenance",
-              "Cloud Infrastructure Management",
-              "Data Backup & Disaster Recovery",
-              "Employee IT Training",
-              "Vendor Management",
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-3 text-white">
-                <CheckCircle2 className="w-5 h-5 text-teal-300 shrink-0" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-          <Link
-            href="/new"
-            className="inline-flex items-center justify-center bg-white text-teal-700 font-bold text-lg py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl mt-8"
-          >
-            Get IT Support Quote
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-        </div>
-        <div className="hidden lg:block">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="space-y-6">
-              <div className="bg-white/10 rounded-xl p-6">
-                <h4 className="font-semibold text-white mb-2">Basic Support</h4>
-                <p className="text-teal-100 text-sm mb-3">
-                  For businesses with 1-10 employees
-                </p>
-                <div className="text-3xl font-bold text-white">
-                  $200
-                  <span className="text-lg font-normal text-teal-200">
-                    /month
-                  </span>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl p-6">
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  Growth Plan
-                </h4>
-                <p className="text-gray-600 text-sm mb-3">
-                  For businesses with 11-50 employees
-                </p>
-                <div className="text-3xl font-bold text-teal-600">
-                  $500
-                  <span className="text-lg font-normal text-gray-500">
-                    /month
-                  </span>
-                </div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6 border-2 border-teal-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <h4 className="font-semibold text-white">Enterprise</h4>
-                  <span className="text-xs bg-teal-500 text-white px-2 py-0.5 rounded-full">
-                    Popular
-                  </span>
-                </div>
-                <p className="text-teal-100 text-sm mb-3">
-                  For businesses with 50+ employees
-                </p>
-                <div className="text-3xl font-bold text-white">Custom</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
 const WhyChooseUs = () => {
   const benefits = [
     {
-      icon: Rocket,
-      title: "We Build First, You Pay After",
-      description:
-        "We deliver a working demo before you pay a dime. No risk, no pressure.",
+      icon: Zap,
+      title: "Prevention First",
+      description: "We find problems before they cost you.",
     },
     {
       icon: Users,
-      title: "Experienced Team",
-      description:
-        "8+ years delivering software solutions across Rwanda and East Africa.",
+      title: "Dedicated Team",
+      description: "You get the same people every time.",
     },
     {
       icon: Clock,
-      title: "On-Time Delivery",
-      description:
-        "We agree on timelines upfront and stick to them. No endless revisions.",
+      title: "Built for SMEs",
+      description: "Prices that fit small business budgets.",
     },
     {
-      icon: Settings,
-      title: "Post-Launch Support",
-      description:
-        "We don't disappear after launch. We're here for updates, fixes, and scaling.",
+      icon: MessageCircle,
+      title: "Plain Language",
+      description: "No jargon. Just clear, honest work.",
     },
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Ubunifu Labs
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We combine technical expertise with business understanding to
-            deliver solutions that actually work.
+        <div className="text-center mb-4">
+          <p className="text-teal-600 font-semibold text-sm uppercase tracking-widest mb-4">
+            WHY UBUNIFU LABS
           </p>
         </div>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900">
+            We do IT differently.
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
-            <div key={index} className="text-center p-6">
-              <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <benefit.icon className="w-8 h-8 text-teal-600" />
+            <div
+              key={index}
+              className="bg-gray-50 rounded-2xl p-8 text-center hover:bg-teal-50 hover:border-teal-200 border border-gray-100 transition group"
+            >
+              <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-teal-600 transition">
+                <benefit.icon className="w-7 h-7 text-teal-600 group-hover:text-white transition" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">
                 {benefit.title}
@@ -330,258 +276,164 @@ const WhyChooseUs = () => {
   );
 };
 
-const Process = () => {
-  const steps = [
-    {
-      number: "01",
-      title: "Discovery",
-      description: "We learn about your business, challenges, and goals.",
-    },
-    {
-      number: "02",
-      title: "Proposal",
-      description: "We present a custom solution with transparent pricing.",
-    },
-    {
-      number: "03",
-      title: "Development",
-      description: "We build your solution with regular progress updates.",
-    },
-    {
-      number: "04",
-      title: "Launch",
-      description: "We deploy, test, and train your team on the new system.",
-    },
+const WhoWeServe = () => {
+  const industries = [
+    { icon: Building2, label: "Hotels & Hospitality" },
+    { icon: Landmark, label: "Financial Services" },
+    { icon: ShoppingBag, label: "Retail & Commerce" },
+    { icon: Heart, label: "NGOs & Development" },
+    { icon: GraduationCap, label: "Schools & Clinics" },
+    { icon: Truck, label: "Logistics & Ops" },
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            How We Work
+        <div className="text-center mb-4">
+          <p className="text-teal-400 font-semibold text-sm uppercase tracking-widest mb-4">
+            WHO WE SERVE
+          </p>
+        </div>
+        <div className="text-center mb-6">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
+            Small &amp; Medium
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A simple, transparent process designed to deliver results.
+          <p className="text-3xl md:text-5xl font-extrabold text-teal-400">
+            Businesses in Rwanda.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <div className="text-6xl font-bold text-teal-100 absolute -top-4 -left-2">
-                {step.number}
+        <div className="max-w-3xl mx-auto mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {industries.map((item) => (
+              <div
+                key={item.label}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 text-center hover:bg-white/10 transition group"
+              >
+                <item.icon className="w-8 h-8 text-teal-400 mx-auto mb-3" />
+                <p className="text-white text-sm font-medium">
+                  {item.label}
+                </p>
               </div>
-              <div className="pt-8 pl-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600">{step.description}</p>
-              </div>
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-12 left-1/2 w-full h-0.5 bg-gradient-to-r from-teal-300 to-gray-200 -z-10"></div>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-400 text-lg">
+            5 – 200 employees. Kigali-based, expanding nationally.
+          </p>
         </div>
       </div>
     </section>
   );
 };
 
-const Projects = ({ projects }: { projects: Project[] }) => (
-  <section id="projects" className="py-24 bg-gray-50">
+const Pricing = () => (
+  <section className="py-24 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Featured Work
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          A selection of projects we&apos;ve delivered for businesses across
-          various industries.
+      <div className="text-center mb-4">
+        <p className="text-teal-600 font-semibold text-sm uppercase tracking-widest mb-4">
+          SIMPLE PRICING
         </p>
       </div>
-
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <Link href={`/${project?.id}`} key={project.id}>
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex flex-col h-full hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer">
-              <div className="mb-4">
-                <span
-                  className={`inline-block text-xs font-semibold px-3 py-1 rounded-full 
-                ${
-                  project.isOurOwn
-                    ? "bg-teal-100 text-teal-700"
-                    : "bg-indigo-100 text-indigo-700"
-                }`}
-                >
-                  {project.isOurOwn ? "Our Creation" : "Client Project"}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 mb-4 flex-grow">{project.summary}</p>
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {project.tags.slice(0, 4).map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs text-gray-500 bg-gray-50 px-2 py-1 rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-const ServicePackages = () => (
-  <section className="py-24 bg-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Service Packages
+        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900">
+          No surprises. Just results.
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Transparent pricing with no hidden costs. Choose what fits your needs.
-        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-lg transition bg-white">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">
-            Starter Website
-          </h3>
-          <p className="text-gray-600 text-sm mb-4">
-            Perfect for small businesses needing a professional online presence.
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition">
+          <Wrench className="w-10 h-10 text-teal-600 mb-4" />
+          <h3 className="text-xl font-bold text-gray-900 mb-1">Quick Fix</h3>
+          <p className="text-3xl font-extrabold text-teal-600 mb-6">
+            From 150,000 RWF
           </p>
-          <ul className="text-gray-600 space-y-2 mb-6 text-sm">
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> 1–5 page
-              website
+          <ul className="space-y-3 mb-8">
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>One-time problem</span>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Mobile-friendly
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>Assessed &amp; fixed</span>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> SEO basics
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Built before
-              payment
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>Clear report after</span>
             </li>
           </ul>
-          <p className="font-bold text-gray-900 text-2xl mb-4">$300 – $700</p>
           <Link
             href="/new"
-            className="inline-block w-full text-center bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 rounded-lg"
+            className="inline-block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-xl transition"
           >
-            Get Started
+            Book a Fix
           </Link>
         </div>
 
-        <div className="rounded-2xl border-2 border-teal-500 p-6 shadow-lg transition bg-white relative">
-          <div className="absolute top-0 right-0 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
-            Popular
+        <div className="bg-white rounded-2xl border-2 border-teal-500 p-8 shadow-lg relative">
+          <div className="absolute top-0 right-0 bg-teal-500 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-xl flex items-center gap-1">
+            <Star className="w-3 h-3" /> Most Popular
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">
-            Growth Website
+          <Zap className="w-10 h-10 text-teal-600 mb-4" />
+          <h3 className="text-xl font-bold text-gray-900 mb-1">
+            System Upgrade
           </h3>
-          <p className="text-gray-600 text-sm mb-4">
-            Designed to convert visitors into customers with advanced features.
+          <p className="text-3xl font-extrabold text-teal-600 mb-6">
+            Custom quote
           </p>
-          <ul className="text-gray-600 space-y-2 mb-6 text-sm">
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Custom design
+          <ul className="space-y-3 mb-8">
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>Full system overhaul</span>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Blog &
-              analytics
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>Modern tools installed</span>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Performance &
-              SEO
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>Training included</span>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Built before
-              payment
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>System updates included</span>
             </li>
           </ul>
-          <p className="font-bold text-gray-900 text-2xl mb-4">$800 – $1,500</p>
           <Link
             href="/new"
-            className="inline-block w-full text-center bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 rounded-lg"
+            className="inline-block w-full text-center bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 rounded-xl transition"
           >
-            Request Demo
+            Get a Quote
           </Link>
         </div>
 
-        <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-lg transition bg-white">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">
-            Custom Software
-          </h3>
-          <p className="text-gray-600 text-sm mb-4">
-            For organizations with complex needs or outdated systems.
+        <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition">
+          <Shield className="w-10 h-10 text-teal-600 mb-4" />
+          <h3 className="text-xl font-bold text-gray-900 mb-1">Monthly Care</h3>
+          <p className="text-3xl font-extrabold text-teal-600 mb-6">
+            From 200,000 RWF/mo
           </p>
-          <ul className="text-gray-600 space-y-2 mb-6 text-sm">
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Internal tools
+          <ul className="space-y-3 mb-8">
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>Dedicated IT coverage</span>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Automation
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>Proactive monitoring</span>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Secure &
-              scalable
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Phased delivery
+            <li className="flex items-start gap-3 text-gray-700">
+              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+              <span>Early problem solving</span>
             </li>
           </ul>
-          <p className="font-bold text-gray-900 text-2xl mb-4">
-            $2,000 – $10,000+
-          </p>
           <Link
             href="/new"
-            className="inline-block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg"
+            className="inline-block w-full text-center bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 rounded-xl transition"
           >
-            Discuss System
-          </Link>
-        </div>
-
-        <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-lg transition bg-white">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">IT Support</h3>
-          <p className="text-gray-600 text-sm mb-4">
-            Ongoing technical support for businesses without IT teams.
-          </p>
-          <ul className="text-gray-600 space-y-2 mb-6 text-sm">
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> 24/7 Help Desk
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> System
-              monitoring
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Cloud
-              management
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-teal-500" /> Monthly
-              retainer
-            </li>
-          </ul>
-          <p className="font-bold text-gray-900 text-2xl mb-4">$200+/month</p>
-          <Link
-            href="/new"
-            className="inline-block w-full text-center bg-teal-100 hover:bg-teal-200 text-teal-700 font-semibold py-3 rounded-lg"
-          >
-            Book Session
+            Get Covered
           </Link>
         </div>
       </div>
@@ -590,19 +442,19 @@ const ServicePackages = () => (
 );
 
 const Contact = () => (
-  <section id="contact" className="py-24 bg-gray-900">
+  <section id="contact" className="py-24 bg-white">
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-        Ready to Transform Your Business?
+      <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
+        Ready to fix your tech?
       </h2>
-      <p className="text-lg text-gray-300 mb-8">
-        Tell us about your challenge. We&apos;ll craft a robust solution.
+      <p className="text-xl text-gray-600 mb-8">
+        Don&apos;t wait until something breaks. Let&apos;s talk today.
       </p>
       <Link
         href="/new"
-        className="inline-flex items-center justify-center bg-teal-500 hover:bg-teal-600 text-white font-bold text-lg py-4 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-xl"
+        className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-bold text-lg py-4 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-xl"
       >
-        Discuss Your Project
+        Get Help Now
         <ArrowRight className="ml-2 w-5 h-5" />
       </Link>
     </div>
@@ -614,14 +466,12 @@ const UbunifuLabsPage = () => {
     <div>
       <Navbar />
       <main>
-        <Hero />
-        <Stats />
-        <Services />
-        <ITSupport />
+        <Problem />
+        <Solution />
+        <HowItWorks />
         <WhyChooseUs />
-        <Process />
-        <Projects projects={projects} />
-        <ServicePackages />
+        <WhoWeServe />
+        <Pricing />
         <Contact />
         <FAQSection />
       </main>

@@ -14,6 +14,7 @@ import {
   CheckCircle2,
   ArrowRight,
   Lightbulb,
+  Wrench,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -95,7 +96,7 @@ const ContactPage = () => {
       if (res.ok) {
         setMessage({
           type: "success",
-          text: "Your project inquiry has been sent successfully! We'll be in touch within 24 hours.",
+          text: "Your request has been sent successfully! We'll be in touch within 24 hours.",
         });
         setFormData({
           name: "",
@@ -115,7 +116,7 @@ const ContactPage = () => {
     } catch {
       setMessage({
         type: "error",
-        text: "Failed to send your inquiry. Please check your connection.",
+        text: "Failed to send your request. Please check your connection.",
       });
     } finally {
       setIsSubmitting(false);
@@ -123,11 +124,11 @@ const ContactPage = () => {
   };
 
   const benefits = [
-    "We build a working demo before you pay",
-    "Transparent pricing with no hidden costs",
-    "Dedicated project manager assigned",
-    "Regular progress updates",
-    "Post-launch support included",
+    "We diagnose before we quote — no surprises",
+    "One-time fixes with no ongoing commitment",
+    "Monthly managed IT for continuous support",
+    "Fast response times for urgent issues",
+    "Based in Kigali, serving all of Rwanda",
   ];
 
   return (
@@ -138,10 +139,11 @@ const ContactPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-              Let&apos;s Build Something Great.
+              Need IT Support? Let&apos;s Talk.
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Tell us about your project. We&apos;ll get back to you within 24 hours with a proposal.
+              Tell us about your technology problem. We&apos;ll assess it and
+              get back to you within 24 hours with a solution.
             </p>
           </div>
 
@@ -149,8 +151,8 @@ const ContactPage = () => {
             <div className="lg:col-span-1">
               <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-2xl p-8 text-white">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                  <Lightbulb className="w-6 h-6" />
-                  Why Work With Us
+                  <Wrench className="w-6 h-6" />
+                  Why Ubunifu Labs
                 </h2>
                 <ul className="space-y-4">
                   {benefits.map((benefit) => (
@@ -162,35 +164,35 @@ const ContactPage = () => {
                 </ul>
 
                 <div className="mt-8 pt-6 border-t border-white/20">
-                  <p className="text-teal-100 text-sm">Prefer to talk first?</p>
-                  <Link href="mailto:niguterwanda@gmail.com" className="text-white font-semibold hover:underline">
-                    Email us directly
+                  <p className="text-teal-100 text-sm">Prefer to email us directly?</p>
+                  <Link href="mailto:info@techinika.com" className="text-white font-semibold hover:underline">
+                    info@techinika.com
                   </Link>
                 </div>
               </div>
 
               <div className="mt-6 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                <h3 className="font-bold text-gray-900 mb-4">Our Typical Response</h3>
+                <h3 className="font-bold text-gray-900 mb-4">What Happens Next</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-sm">1</div>
                     <div>
                       <p className="font-medium text-gray-900">Within 24 hours</p>
-                      <p className="text-sm text-gray-500">We review your project</p>
+                      <p className="text-sm text-gray-500">We review your issue</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-sm">2</div>
                     <div>
-                      <p className="font-medium text-gray-900">2-3 days</p>
-                      <p className="text-sm text-gray-500">Proposal & demo delivered</p>
+                      <p className="font-medium text-gray-900">We diagnose & quote</p>
+                      <p className="text-sm text-gray-500">Clear explanation before any work</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-sm">3</div>
                     <div>
-                      <p className="font-medium text-gray-900">Start immediately</p>
-                      <p className="text-sm text-gray-500">Once you approve</p>
+                      <p className="font-medium text-gray-900">Problem resolved</p>
+                      <p className="text-sm text-gray-500">We fix it and make sure it stays fixed</p>
                     </div>
                   </div>
                 </div>
@@ -237,20 +239,20 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                       <FileText className="w-5 h-5 text-teal-600" />
-                      Project Details
+                      Problem Details
                     </h3>
                     <div className="space-y-4">
                       <InputField
                         id="project_title"
-                        label="Project Title"
+                        label="Brief Title"
                         icon={FileText}
-                        placeholder="E-commerce Platform for Retail Business"
+                        placeholder="Website keeps going down / Email not sending"
                         value={formData.project_title}
                         onChange={handleChange}
                       />
                       <div>
                         <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1.5">
-                          Describe Your Project
+                          Describe the Problem
                         </label>
                         <textarea
                           id="description"
@@ -260,7 +262,7 @@ const ContactPage = () => {
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition duration-200 text-gray-900 placeholder-gray-400"
-                          placeholder="What problem are you solving? What features do you need? What existing systems do you have?"
+                          placeholder="What is not working? When did it start? What have you tried so far?"
                         />
                       </div>
                     </div>
@@ -269,12 +271,12 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                       <Clock className="w-5 h-5 text-teal-600" />
-                      Budget & Timeline
+                      Service Preference
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-1.5">
-                          Estimated Budget
+                          Service Type
                         </label>
                         <div className="relative">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -288,19 +290,18 @@ const ContactPage = () => {
                             required
                             className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition duration-200 appearance-none bg-white"
                           >
-                            <option value="">Select a range...</option>
-                            <option value="Below $1,000">Below $1,000</option>
-                            <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                            <option value="$5,000 - $20,000">$5,000 - $20,000</option>
-                            <option value="$20,000 - $50,000">$20,000 - $50,000</option>
-                            <option value="$50,000+">$50,000+</option>
-                            <option value="TBD">Not sure yet</option>
+                            <option value="">Select a service...</option>
+                            <option value="One-Time Fix">One-Time Fix</option>
+                            <option value="Monthly Managed IT (Basic)">Monthly Managed IT (Basic)</option>
+                            <option value="Monthly Managed IT (Growth)">Monthly Managed IT (Growth)</option>
+                            <option value="Monthly Managed IT (Enterprise)">Monthly Managed IT (Enterprise)</option>
+                            <option value="Not Sure Yet">Not Sure Yet</option>
                           </select>
                         </div>
                       </div>
                       <div>
                         <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-1.5">
-                          Target Timeline
+                          Urgency
                         </label>
                         <div className="relative">
                           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -314,12 +315,11 @@ const ContactPage = () => {
                             required
                             className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition duration-200 appearance-none bg-white"
                           >
-                            <option value="">Select a timeline...</option>
-                            <option value="ASAP">ASAP (Urgent)</option>
-                            <option value="1 - 3 Months">1 - 3 Months</option>
-                            <option value="3 - 6 Months">3 - 6 Months</option>
-                            <option value="6+ Months">6+ Months</option>
-                            <option value="Flexible">Flexible</option>
+                            <option value="">Select urgency...</option>
+                            <option value="ASAP">ASAP (Everything is down)</option>
+                            <option value="This Week">This Week</option>
+                            <option value="This Month">This Month</option>
+                            <option value="Just Exploring">Just Exploring Options</option>
                           </select>
                         </div>
                       </div>
@@ -341,7 +341,7 @@ const ContactPage = () => {
                       </>
                     ) : (
                       <>
-                        Send Project Inquiry
+                        Send Request
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </>
                     )}
@@ -356,7 +356,7 @@ const ContactPage = () => {
                   )}
 
                   <p className="text-center text-sm text-gray-500">
-                    Your information is kept confidential. We never share your project details.
+                    Your information is kept confidential. We never share your details.
                   </p>
                 </form>
               </div>

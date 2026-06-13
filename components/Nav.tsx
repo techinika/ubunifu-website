@@ -14,7 +14,7 @@ export const Navbar = () => (
         href="/new"
         className="bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-5 rounded-lg transition duration-300 transform hover:scale-105 shadow-md"
       >
-        Start a Project
+        Get IT Support
       </Link>
     </div>
   </header>

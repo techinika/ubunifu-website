@@ -1,6 +1,6 @@
 # Ubunifu Labs Website
 
-A Next.js 16 website for Ubunifu Labs - a software development and IT consulting company based in Rwanda.
+A Next.js 16 website for Ubunifu Labs — a tech support and managed IT services company based in Kigali, Rwanda. We fix tech problems before they break your business.
 
 ## Tech Stack
 
@@ -35,9 +35,9 @@ cp .env .env.local
 
 ```env
 NEXT_PUBLIC_BASE_URL=https://ubunifu.techinika.co.rw
-CONTACT_EMAIL=your-email@gmail.com
+CONTACT_EMAIL=info@techinika.com
 CONTACT_EMAIL_PASSWORD=your-app-password
-RECIPIENT_EMAIL=recipient@example.com
+RECIPIENT_EMAIL=info@techinika.com
 ```
 
 ### Development
@@ -65,14 +65,14 @@ npm run lint
 ├── app/                    # Next.js App Router pages
 │   ├── layout.tsx         # Root layout with metadata
 │   ├── page.tsx           # Home page
-│   ├── new/               # Project inquiry page
+│   ├── new/               # IT support inquiry page
 │   ├── (projects)/[project]/ # Dynamic project pages
 │   ├── api/contact/       # Contact form API
 │   └── sitemap.ts         # Dynamic sitemap
 ├── components/            # React components
 │   ├── MainPage.tsx       # Home page sections
 │   ├── OneProject.tsx     # Project detail component
-│   ├── NewProjectPage.tsx # Contact/inquiry form
+│   ├── NewProjectPage.tsx # IT support inquiry form
 │   ├── Nav.tsx            # Navigation
 │   ├── Footer.tsx         # Footer
 │   └── FAQs.tsx           # FAQ section
@@ -90,7 +90,7 @@ npm run lint
 - robots.txt
 - OpenGraph metadata
 - Canonical URLs
-- JSON-LD structured data (Organization, FAQ, Article schemas)
+- JSON-LD structured data (Organization, FAQ schemas)
 - Static page generation for projects
 
 ## Deployment
@@ -110,10 +110,10 @@ Route (app)
 
 ## Key Features
 
-- Custom software development services showcase
-- IT support & outsourcing packages
+- IT support & managed services showcase
+- One-time fix and monthly managed IT pricing
 - Project portfolio with case studies
-- Project inquiry form with email notifications
+- IT support inquiry form with email notifications
 - FAQ section with structured data
 - Fully responsive design
 - SEO optimized

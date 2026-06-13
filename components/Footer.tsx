@@ -10,7 +10,7 @@ function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Ubunifu Labs</h3>
             <p className="text-gray-400 text-sm">
-              A Techinika initiative focused on research, software development, and technology consulting.
+              A Techinika initiative providing professional IT support and managed services to keep your business technology running reliably every day.
             </p>
           </div>
           <div>
@@ -18,15 +18,16 @@ function Footer() {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><Link href="/" className="hover:text-white transition">Home</Link></li>
               <li><Link href="/#services" className="hover:text-white transition">Services</Link></li>
-              <li><Link href="/#projects" className="hover:text-white transition">Projects</Link></li>
-              <li><Link href="/#contact" className="hover:text-white transition">Contact</Link></li>
-              <li><Link href="/new" className="hover:text-white transition">Start a Project</Link></li>
+              <li><Link href="/#projects" className="hover:text-white transition">Our Work</Link></li>
+              <li><Link href="/new" className="hover:text-white transition">Get IT Support</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-lg mb-4">Resources</h3>
+            <h3 className="font-bold text-lg mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li><Link href="/new" className="hover:text-white transition">Start a Project</Link></li>
+              <li><a href="mailto:info@techinika.com" className="hover:text-white transition">info@techinika.com</a></li>
+              <li><a href="tel:+250791377446" className="hover:text-white transition">+250 791 377 446</a></li>
+              <li><span>Kigali, Rwanda</span></li>
             </ul>
           </div>
         </div>
