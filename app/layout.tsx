@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { baseUrl } from "./sitemap";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -45,6 +52,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: baseUrl,
+  },
   verification: {
     google: "your-google-site-verification-code",
   },
@@ -81,7 +91,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        <link rel="manifest" href="/manifest" />
+        {children}
+      </body>
     </html>
   );
 }
